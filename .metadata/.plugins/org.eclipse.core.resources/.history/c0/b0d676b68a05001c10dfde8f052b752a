@@ -1,0 +1,35 @@
+package day0825;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JFrame;
+
+public class ComboBoxEx05 extends JFrame{
+
+	Container cp;
+	
+	public ComboBoxEx05(String title) {
+		super(title);
+		
+		cp=this.getContentPane();
+		this.setBounds(1000, 200, 380, 360);
+		setDesign();
+		cp.setBackground(new Color(252,233,219));
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//종료
+		this.setVisible(true);
+	}
+	
+	public void setDesign() {
+		this.setLayout(null);
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		new ComboBoxEx05("콤보박스");
+	}
+
+}

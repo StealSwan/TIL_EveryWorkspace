@@ -1,0 +1,25 @@
+package spring.di.ex3;
+
+public class grade {
+
+	String grade;
+	Student student;
+	
+	//생성자 주입
+	public grade(Student student) {
+		super();
+		this.student=student;
+	}
+	
+	//setter주입
+	public grade(String grade) {
+		this.grade = grade;
+	}
+	
+	//출력
+	public void writeData() {
+		System.out.println("이름: " + );
+		System.out.println("연락처: " + );
+		System.out.println("학년: " + );
+	}
+}

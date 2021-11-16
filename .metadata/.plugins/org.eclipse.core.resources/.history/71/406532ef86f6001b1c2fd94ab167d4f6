@@ -1,0 +1,24 @@
+package day0806;
+
+import java.util.Scanner;
+
+public class FactorialTest_09 {
+	
+	public static void main(String[] args) {
+		
+		//팩토리얼 구하기
+		//5!=120
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("숫자를 입력하세요.");
+		
+		int a = scanner.nextInt();
+		int fac=0;
+		
+		for (int i = 1; i <= a; i++) {
+			fac *= i;
+		}
+	} 	System.out.println(a + "!" + "=" + fac);
+
+
+}

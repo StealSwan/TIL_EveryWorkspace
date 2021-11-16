@@ -1,0 +1,13 @@
+package spring.anno2;
+
+import org.springframework.stereotype.Component;
+
+@Component("ktire")
+public class KoreaTire implements Tire{
+
+	@Override
+	public void writeTireName() {
+		// TODO Auto-generated method stub
+		
+	}
+}

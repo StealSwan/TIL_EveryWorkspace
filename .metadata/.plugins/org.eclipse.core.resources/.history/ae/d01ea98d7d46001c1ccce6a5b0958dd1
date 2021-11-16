@@ -1,0 +1,10 @@
+package spring.di.ex5;
+
+public class JumunMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

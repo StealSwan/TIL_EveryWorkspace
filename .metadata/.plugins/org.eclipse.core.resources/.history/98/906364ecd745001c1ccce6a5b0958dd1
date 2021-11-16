@@ -1,0 +1,19 @@
+package spring.day1115.test;
+
+public class HelloMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("자바방식으로 Hello메서드 호출하기");
+		
+		Hello hello1 = new Hello();
+		Hello hello2 = new Hello();
+		
+		System.out.println(hello1.getMessage());
+		
+		//자바에서는 new로 생성시마다 새로운 영역에 생성한다
+		System.out.println(hello1==hello2);
+	}
+
+}

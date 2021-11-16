@@ -1,0 +1,10 @@
+package spring.di.ex6;
+
+import java.util.ArrayList;
+
+public class Student {
+
+	private String name;
+	private int age;
+	private ArrayList<String> hobby;
+}

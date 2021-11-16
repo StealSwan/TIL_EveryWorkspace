@@ -1,0 +1,15 @@
+package spring.di.ex3;
+
+public class grade {
+
+	String grade;
+	Student student;
+	
+	//积己磊 林涝
+	public grade(Student student) {
+		super();
+		this.student=student;
+	}
+	
+	//setter林涝
+}

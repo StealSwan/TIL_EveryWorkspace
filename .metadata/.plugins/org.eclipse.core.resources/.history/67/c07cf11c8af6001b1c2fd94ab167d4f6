@@ -1,0 +1,37 @@
+package day0806;
+
+import java.util.Scanner;
+
+public class ForReviewTest_10 {
+
+	public static void main(String[] args) {
+		
+		//10번 동안 숫자를 입력하신 후
+		//1:10 
+		//2: -3 ...
+		//---------
+		//양수의 갯수:8
+		//음수의 갯수:2
+		
+		System.out.println("10개의 숫자를 입력해주세요.");
+		
+		Scanner scanner = new Scanner(System.in);
+		int a = 0;
+		int plus, min, zero = 0;
+		
+		for (int i = 1; i < 11; i++) {
+			System.out.print(i + ":");
+			a = scanner.nextInt();
+		} if (a > 0) {
+			plus ++;
+		} else if (a<0) {
+			min ++;
+		} else if (a==0) {
+			zero ++;
+		}
+		System.out.println("양수의 갯수: " + plus);
+		System.out.println("음수의 갯수: " + min);
+		System.out.println("0 입력 횟수: " + zero);
+		
+	}
+}

@@ -1,0 +1,12 @@
+package spring.di.ex3;
+
+public class grade {
+
+	String grade;
+	Student student;
+	
+	//생성자 주입
+	public public grade(Student student) {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package spring.di.ex5;
+
+public class Shop {
+
+	private String sangpum;
+	private String sangpum;
+	private String sangpum;
+	
+}

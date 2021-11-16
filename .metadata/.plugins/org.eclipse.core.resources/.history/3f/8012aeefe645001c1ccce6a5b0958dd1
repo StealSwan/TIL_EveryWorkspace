@@ -1,0 +1,15 @@
+package spring.di.ex2;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Ex2Main {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context= new ClassPathXmlApplicationContext("appContext2.xml");
+		
+		//MyInfo부터 먼저 생성후 확인
+		MyInfo myInfo = (MyInfo)context.getBean("my");
+	}
+}

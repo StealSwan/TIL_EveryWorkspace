@@ -1,0 +1,11 @@
+package spring.di.ex7;
+
+import java.util.ArrayList;
+
+public class Sawon {
+
+	private String name;
+	private int pay;
+	private String jikgup;
+	private ArrayList<String> buseo;
+}

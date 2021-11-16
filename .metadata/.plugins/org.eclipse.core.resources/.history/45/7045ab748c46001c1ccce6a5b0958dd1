@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="score" class="spring.di.quiz.Score">
+		<!-- 모두 생성자 방식 -->
+		<constructor-arg value="90"/>
+		<constructor-arg value="88"/>
+		<constructor-arg value="77"/>
+	</bean>
+
+
+	<bean id="info" class="spring.di.quiz.Mydata">
+		<!-- 모두 생성자 방식 -->
+		<constructor-arg value=""/>
+		<constructor-arg value=""/>
+		<constructor-arg value=""/>		
+	</bean>
+
+
+	<bean id="myData" class="spring.di.quiz.Mydata">
+		
+	</bean>
+</beans>

@@ -1,0 +1,9 @@
+package spring.di.ex6;
+
+public class Sungjuk {
+
+	Student stu;
+	int kor, eng;
+	
+	
+}

@@ -1,0 +1,5 @@
+package spring.di.ex3;
+
+public class Student {
+
+}

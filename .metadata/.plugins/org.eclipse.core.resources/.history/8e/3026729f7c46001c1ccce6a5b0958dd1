@@ -1,0 +1,12 @@
+package spring.di.ex5;
+
+public class Jumun {
+
+	Shop shop;
+	int cnt;
+	String name;
+	
+	//name »ý¼ºÀÚ
+	
+	//shop, cnt, setter
+}

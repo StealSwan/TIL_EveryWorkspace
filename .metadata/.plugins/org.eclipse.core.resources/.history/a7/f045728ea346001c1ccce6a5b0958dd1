@@ -1,0 +1,5 @@
+package spring.anno2;
+
+public interface Tire {
+
+}

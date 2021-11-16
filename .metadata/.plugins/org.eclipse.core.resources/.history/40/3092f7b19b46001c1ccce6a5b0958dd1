@@ -1,0 +1,5 @@
+package spring.anno1;
+
+public interface DaoInter {
+
+}

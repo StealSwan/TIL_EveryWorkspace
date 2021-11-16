@@ -1,0 +1,15 @@
+package spring.day1115.test;
+
+import spring.di.ex1.Message;
+import spring.di.ex1.MessageInter;
+
+public class Ex1Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MessageInter m1 = new Message();
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package spring.di.ex4;
+
+public class PersonData {
+
+	private String sawonname;
+	private int pay;
+	private String ipsaday;
+	
+	//디폴트 생성자
+	public PersonData() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public PersonData(String name) {
+		sawonname = name;
+	}
+	
+	
+	//급여 입사일 setter 주입
+	public void setPay(int pay) {
+		this.pay = pay;
+	}
+	
+	public void setIpsaday(String ipsaday) {
+		this.ipsaday = ipsaday;
+	}
+	
+}

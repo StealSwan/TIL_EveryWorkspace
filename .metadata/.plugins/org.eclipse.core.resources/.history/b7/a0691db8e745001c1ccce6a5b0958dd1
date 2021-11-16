@@ -1,0 +1,8 @@
+package spring.di.ex3;
+
+public class Student {
+
+	String name;
+	String hp;
+	String major;
+}

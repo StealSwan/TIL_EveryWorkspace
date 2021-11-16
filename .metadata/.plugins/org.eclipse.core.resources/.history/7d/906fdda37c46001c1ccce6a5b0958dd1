@@ -1,0 +1,22 @@
+package spring.di.ex5;
+
+public class Jumun {
+
+	Shop shop;
+	int cnt;
+	String name;
+	//shop, cnt setter
+	public void setShop(Shop shop) {
+		this.shop = shop;
+	}
+
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
+	
+	//name »ý¼ºÀÚ
+	
+	
+	
+	
+}

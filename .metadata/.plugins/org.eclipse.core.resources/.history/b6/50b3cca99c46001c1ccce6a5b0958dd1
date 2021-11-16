@@ -1,0 +1,17 @@
+package spring.anno1;
+
+public class LogicController {
+
+	DaoInter daoInter;
+	
+	public LogicController(MyDao dao) {
+		
+		this.daoInter=dao;
+	}
+	
+	
+	//insert
+	public void insert(String str) {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package spring.di.ex5;
+
+public class Shop {
+
+	private String sangpum;
+	private int price;
+	private String color;
+	
+	
+	//sangpum »ý¼ºÀÚ
+	
+	//price, color
+	
+}

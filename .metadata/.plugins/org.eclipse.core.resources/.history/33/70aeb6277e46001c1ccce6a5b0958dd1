@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="shop" class="spring.di.ex5.Shop">
+		<constructor-arg value=""/>
+		<property name="price" value="150000"/>
+		<property name="color" value="오렌지"/>
+	</bean>
+	
+	<bean id="jumun" class="spring.di.ex5.Jumun">
+		<constructor-arg value="이영자"/>
+		<property name="shop" ref="shop"/>
+		<property name="cnt" value="2"/>
+	</bean>
+</beans>

@@ -1,0 +1,25 @@
+package spring.di.ex3;
+
+public class Student {
+
+	String name;
+	String hp;
+	String grade;
+	
+	//»ý¼ºÀÚ
+	public Student(String name, String hp) {
+		super();
+		this.name = name;
+		this.hp = hp;
+	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Student [name= " + name + ", hp= " + hp + "]";
+	}
+	
+	
+		
+}

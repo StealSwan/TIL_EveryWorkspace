@@ -1,0 +1,22 @@
+package spring.di.ex2;
+
+public class Person {
+
+	String schoolNaem;
+	MyInfo info;
+	
+	//积己磊林涝(MyInfo)
+	public Person() {
+		super();
+		this.info=info;
+	}
+
+
+	//setter林涝_schoolName
+
+	public void setSchoolNaem(String schoolNaem) {
+		this.schoolNaem = schoolNaem;
+	}
+	
+	
+}

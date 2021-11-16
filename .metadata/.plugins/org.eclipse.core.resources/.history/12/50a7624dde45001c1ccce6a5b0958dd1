@@ -1,0 +1,33 @@
+package spring.day1115.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import spring.di.ex1.Message;
+import spring.di.ex1.Message2;
+import spring.di.ex1.MessageInter;
+
+public class Ex1Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//클래스 객체 선언
+		//자바방식
+		MessageInter m1 = new Message();
+		m1.sayHello("철수");
+		
+		MessageInter m2 = new Message2();
+		m2.sayHello("영희");
+		
+		
+		System.out.println("스프링 방식으로 객체생성 후 호출하기");
+		ApplicationContext context = new ClassPathXmlApplicationContext("appContext1.xml");
+		
+		//방법1
+		MessageInter m3 = (Message) context.getBean("mesBean1");
+		
+		//방법2
+	}
+
+}

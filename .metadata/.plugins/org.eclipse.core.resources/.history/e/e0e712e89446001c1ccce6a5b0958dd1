@@ -1,0 +1,23 @@
+package spring.di.quiz;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MyDataMain {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext app = new ClassPathXmlApplicationContext("quizConfig.xml");
+		
+		//출력 메서드가 있는 곳의 객체를 선언 & 생성
+		
+		//my1 - 모두 생성자로
+		Mydata my1 = (Mydata)app.getBean("my1");
+		my1.writeData();
+				
+		//my2 - 모두 setter로
+		Mydata my2 = (Mydata)app.getBean("my2");
+		my2.writeData();
+	}
+
+}

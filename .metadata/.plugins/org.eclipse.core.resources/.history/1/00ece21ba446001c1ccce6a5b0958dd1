@@ -1,0 +1,9 @@
+package spring.anno2;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyCar {
+
+	Tire tire;
+}

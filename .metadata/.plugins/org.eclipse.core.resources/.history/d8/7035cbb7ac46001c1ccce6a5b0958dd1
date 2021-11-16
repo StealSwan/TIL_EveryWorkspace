@@ -1,0 +1,12 @@
+package spring.anno4;
+
+public class Anno4Main {
+
+	public static void writeStudent(Student s) {
+		System.out.println("Student 데이타 출력");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

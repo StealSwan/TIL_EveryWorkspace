@@ -1,0 +1,10 @@
+package spring.di.ex6;
+
+public class SungjukMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

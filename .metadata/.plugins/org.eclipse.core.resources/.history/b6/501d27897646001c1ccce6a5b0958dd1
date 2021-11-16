@@ -1,0 +1,15 @@
+package spring.di.ex4;
+
+public class Person {
+	
+	PersonData data;
+	
+	public Person(PersonData data) {
+		super();
+		this.data = data;
+	}
+	
+	
+	//Ãâ·Â¹®
+
+}

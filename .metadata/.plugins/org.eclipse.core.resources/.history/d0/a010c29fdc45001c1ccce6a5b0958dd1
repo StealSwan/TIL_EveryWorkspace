@@ -1,0 +1,11 @@
+package spring.di.ex1;
+
+public class Message implements MessageInter {
+
+	@Override
+	public void sayHello() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

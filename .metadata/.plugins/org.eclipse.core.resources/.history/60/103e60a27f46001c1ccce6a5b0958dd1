@@ -1,0 +1,18 @@
+package spring.di.ex5;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class JumunMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext app = new ClassPathXmlApplicationContext("appContext5.xml");
+		
+		Jumun jj = (Jumun)app.getBean("jumun");
+		jj.WriteJumun();
+
+	}
+
+}

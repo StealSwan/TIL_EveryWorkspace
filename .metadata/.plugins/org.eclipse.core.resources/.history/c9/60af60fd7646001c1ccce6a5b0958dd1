@@ -1,0 +1,22 @@
+package spring.di.ex4;
+
+public class Person {
+	
+	PersonData data;
+	
+	
+	//생성자 대입
+	public Person(PersonData data) {
+		super();
+		this.data = data;
+	}
+	
+	
+	//출력문
+	public void writeData() {
+		System.out.println("사원명: " + data.getSawonname());
+		System.out.println("사원명: " + data.getSawonname());
+		System.out.println("사원명: " + data.getSawonname());
+	}
+
+}

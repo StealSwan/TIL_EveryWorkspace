@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;day0902.jdbcOracleEx&apos; to &apos;JdbcOracleEx&apos;&#x0D;&#x0A;- Original project: &apos;SistJavaProject&apos;&#x0D;&#x0A;- Original element: &apos;day0902.jdbcOracleEx&apos;&#x0D;&#x0A;- Renamed element: &apos;day0902.JdbcOracleEx&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;jdbcOracleEx&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;day0902{jdbcOracleEx.java[jdbcOracleEx" matchStrategy="1" name="JdbcOracleEx" qualified="false" references="true" similarDeclarations="false" stamp="1630565355538" textual="false" version="1.0"/>
+</session>

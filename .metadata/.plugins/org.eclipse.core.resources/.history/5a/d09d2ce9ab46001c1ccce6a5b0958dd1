@@ -1,0 +1,18 @@
+package spring.anno4;
+
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.stereotype.Component;
+
+@ImportResource("classpath:annoContext.xml")
+@Component
+public class ApplicationConfig {
+
+	public Student student1() {
+
+		Student stu = new Student();
+		stu.setName("°­È£µ¿");
+		stu.setAge(30);
+		
+		return stu;
+	}
+}

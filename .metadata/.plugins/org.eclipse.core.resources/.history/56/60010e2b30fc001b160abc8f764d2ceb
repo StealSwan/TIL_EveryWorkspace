@@ -1,0 +1,146 @@
+package day0813_1;
+
+import java.util.Scanner;
+
+
+//멤버 클래스
+//가족 수당: 가족수*50000(단, 4인 이상은 무조건 20만원)
+//시간 수당: 초과근무시간*30000(단 5시간 이상은 무조건 15만원)
+//실수령액: pay+가족수당+시간수당
+class Emp{
+	private String name;
+	private int pay;
+	private int famsu; //가족수
+	private int timesu; //초과시간
+	
+	//getter, setter
+	public String getName() {
+		return name;			
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPay() {
+		return pay;
+	}
+	public void setPay(int pay) {
+		this.pay = pay;
+	}
+	public int getFamsu() {
+		return famsu;
+	}
+	public void setFamsu(int famsu) {
+		this.famsu = famsu;
+	}
+	public int getTimesu() {
+		return timesu;
+	}
+	public void setTimesu(int timesu) {
+		this.timesu = timesu;
+	}
+	
+	//따로 만든 가족수당, 시간외수당, 총급여
+	//!!!입력받은 값을 토대로 만들어 출력하는 것이므로 getter 메소드
+	//계산한 값을 전달해야 하므로, 리턴 값 있어야 함
+	public int getPayFamSu() {
+		int payFamsu = this.famsu*50000;
+		if (this.famsu>=4) {
+			payFamsu=200000;
+		}
+		return payFamsu;
+	}
+	
+	//비슷하게 시간외수당
+	public int getPayTimeSu() {
+		int payTimeSu = this.timesu*30000;
+		if (this.timesu>=5) {
+			payTimeSu=150000;
+		}
+		return payTimeSu;
+	}
+	
+	//비슷하게 실수령액
+	//void로 출력해버릴 경우, 한번에 계산시 return값이 없어서 에러발생
+	public int getAllPay() {
+		int allPay = this.pay + this.getPayFamSu() + this.getPayTimeSu();
+		return allPay;
+	}
+	
+	//출력메소드
+	public static void getAll(Emp e) {
+		//!!! 클래스간 메소드 객체 호출 방식으로!
+		//!!! get 메소드!!!
+		//!!! 위에 없는 총 급여 값은 따라 만들어줘야함
+		System.out.println(e.getName() + "\t" + e.getPay() + "\t" + e.getFamsu() + "\t"
+				+ e.getTimesu()+"\t"+e.getPayFamSu()+ "\t" + e.getPayTimeSu() + "\t" +e.getAllPay());
+	}
+
+
+}
+
+public class QuizScannerEmp {
+	
+	//static 회사 직급현황
+	private static void TITLE() {
+		System.out.println("**우리회사 직원 급여 현황**");
+		System.out.println("사원명\t급여\t가족수\t초과시간\t가족수당\t시간외수당\t총급여");
+	}
+	
+
+
+	public static void main(String[] args) {
+
+		//Scanner, 변수입력
+		//배열 변수 할당
+		//!!! 여기선 할당만 한다.
+		Scanner scanner = new Scanner(System.in);
+		String name;
+		int sawonSu;
+		int pay;
+		int famSu;
+		int timeSu;
+		Emp emp [];
+		
+		
+		//배열 크기 할당
+		System.out.println("총 사원수를 입력해주세요.");
+		sawonSu=Integer.parseInt(scanner.nextLine());
+		emp = new Emp [sawonSu];
+		
+		
+		//입력
+		for (int i = 0; i < emp.length; i++) {
+			//!!!
+			emp [i] = new Emp();
+			
+			System.out.println("사원명을 입력하세요.");
+			name = scanner.nextLine();
+			
+			System.out.println("급여를 입력하세요.");
+			pay = Integer.parseInt(scanner.nextLine());
+
+			System.out.println("가족수을 입력하세요.");
+			famSu = Integer.parseInt(scanner.nextLine());
+
+			System.out.println("초과시간을 입력하세요");
+			timeSu = Integer.parseInt(scanner.nextLine());
+			
+			///!!!
+			emp[i].setName(name);
+			emp[i].setPay(pay);
+			emp[i].setFamsu(famSu);
+			emp[i].setTimesu(timeSu);
+		}
+
+		
+		
+		//출력
+		QuizScannerEmp.TITLE();
+		for (Emp emp2 : emp) {
+			///!!!
+			Emp.getAll(emp2);
+			
+		}
+	}
+
+}

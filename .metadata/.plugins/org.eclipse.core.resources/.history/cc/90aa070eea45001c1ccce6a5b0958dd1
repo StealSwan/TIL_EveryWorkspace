@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="student" class="spring.di.ex3.Student">
+		<constructor-arg value="유재석"/>
+		<constructor-arg value="010-7777-8888"/>
+	</bean>
+	
+	<bean id="grade" class="spring.di.ex3.grade">
+		<!-- 생성자 주입 -->
+		<constructor-arg ref="student"/>
+		
+		<!-- setter 주입 -->
+		<property name="grades" value="2"/>
+	</bean>
+</beans>

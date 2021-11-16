@@ -1,0 +1,7 @@
+package spring.di.quiz;
+
+public class Info {
+
+	private String name;
+	private int age;
+}
