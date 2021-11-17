@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
 	//@RequestMapping(value = "/", method = RequestMethod.GET)
-	@GetMapping("/")
+	//@GetMapping("/")
 	public String Hello(Model model) {
 		
 		//model: request에 데이타를 저장하기 위한 클래스
