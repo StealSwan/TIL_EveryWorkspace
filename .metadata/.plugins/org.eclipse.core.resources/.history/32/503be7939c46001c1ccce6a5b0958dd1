@@ -1,6 +1,0 @@
-package spring.anno1;
-
-public class LogicController {
-
-	DaoInter daoInter;
-}

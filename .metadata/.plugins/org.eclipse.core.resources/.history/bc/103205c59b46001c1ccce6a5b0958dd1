@@ -1,8 +1,0 @@
-package spring.anno1;
-
-public interface DaoInter {
-
-	public void insertData(String str);
-	public void insertData(String str);
-	
-}

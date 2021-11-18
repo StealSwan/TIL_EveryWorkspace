@@ -5,9 +5,10 @@
 		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1626943098774"/>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.project"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.springsource.sts.wizard.template"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
 	<section name="SmartImportWizard">
@@ -21,6 +22,17 @@
 		</list>
 	</section>
 	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\user\Documents\카카오톡 받은 파일\mvcregacy.zip"/>
+			<item value="C:\Users\user\Documents\카카오톡 받은 파일\mvcread7.zip"/>
+			<item value="C:\Users\user\Documents\카카오톡 받은 파일\mvc6.zip"/>
+		</list>
 	</section>
 	<section name="BasicNewProjectResourceWizard">
 	</section>
