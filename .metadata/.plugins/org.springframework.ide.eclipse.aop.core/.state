@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="SpringMvcStartBoard"/>
+<aop-project name="SpringMvcTest"/>
 <aop-project name="SpringMvc1"/>
 <aop-project name="SpringMvc2"/>
-<aop-project name="SpringEx2"/>
 <aop-project name="SpringEx1"/>
+<aop-project name="SpringEx2"/>
 <aop-project name="SpringMvcRead3"/>
 <aop-project name="SpringMvcMunje"/>
 <aop-project name="SpringMvcRead7"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTDConfig 3.0//EN" "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- type을 간단하게 정의 -->
+		<typeAlias type="data.board.BoardDto" alias="bdto"/>
+	</typeAliases>
+	
+	<mappers>
+		<!-- SQL은 경로임 -->
+		<mapper resource="mybatis/setting/BoardSql.xml"/>
+	</mappers>
+	
+</configuration>
