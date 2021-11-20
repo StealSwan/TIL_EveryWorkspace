@@ -40,7 +40,7 @@ public class UploadController {
 			//path에 업로드하기
 			try {
 				photo.transferTo(new File(path+"\\"+fileName));
-			} catch (IllegalStateException | IOException e) {
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
