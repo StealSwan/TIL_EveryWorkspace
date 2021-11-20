@@ -3,6 +3,11 @@ INDEX VERSION 1.4+C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse
 1947792993.index
 1207828688.index
 1185202388.index
+<<<<<<< HEAD
+=======
+1207828688.index
+3977357275.index
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
 3907259686.index
 3977357275.index
 3015427962.index

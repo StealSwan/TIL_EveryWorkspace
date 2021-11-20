@@ -1,7 +1,11 @@
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=7,1\:23,1
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1637304552124
+=======
+platformState=1637280091921
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
 quickStart=false
 tipsAndTricks=true
 unassociatedEditorStrategy=org.eclipse.ui.ide.textEditor

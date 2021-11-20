@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
+=======
+    <fullyQualifiedTypeName name="spring.di.ex1.Message"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
     <fullyQualifiedTypeName name="spring.di.ex1.Message2"/>
     <fullyQualifiedTypeName name="spring.di.ex2.Person"/>
     <fullyQualifiedTypeName name="spring.di.ex3.Student"/>
@@ -42,6 +47,10 @@
     <fullyQualifiedTypeName name="spring.mvc.munje.SawonDto"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="spring.shop.model.shopDto"/>
+<<<<<<< HEAD
+=======
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -55,9 +64,13 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="data.board.BoardDto"/>
+=======
+    <fullyQualifiedTypeName name="java.lang.String"/>
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
 </qualifiedTypeNameHistroy>

@@ -9890,5 +9890,8 @@ java.util.ConcurrentModificationException: null
 2021-11-19 16:50:47,393 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2021-11-19 16:50:48,462 [Worker-49: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-11-19 16:50:48,470 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+<<<<<<< HEAD
 2021-11-19 16:50:48,474 [Worker-49: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-11-19 16:50:48,475 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+=======
+>>>>>>> 853a4a1fb9a27229bf54f64491f6d4674e9e1c81
