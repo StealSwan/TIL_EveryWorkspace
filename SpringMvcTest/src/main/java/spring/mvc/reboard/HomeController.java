@@ -1,4 +1,4 @@
-package spring.test.mvc;
+package spring.mvc.reboard;
 
 import java.text.DateFormat;
 import java.util.Date;

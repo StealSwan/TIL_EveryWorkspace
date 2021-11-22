@@ -27,4 +27,26 @@ public class BoardDao extends SqlSessionDaoSupport implements BoardDaoInter{
 		// TODO Auto-generated method stub
 		return getSqlSession().selectList("selectAllOfBoard");
 	}
+	
+	
+	@Override
+	public BoardDto getData(String num) {
+		// TODO Auto-generated method stub
+		return getSqlSession().selectOne("selectOneOfBoard", num);
+	}
+	
+	
+	@Override
+	public void updateBoard(BoardDto dto) {
+		// TODO Auto-generated method stub
+		
+		getSqlSession().update("updateOfBoard", dto);
+	}
+	
+	
+	@Override
+	public void deleteBoard(String num) {
+		// TODO Auto-generated method stub
+		getSqlSession().delete("deleteOfBoard", num);
+	}
 }

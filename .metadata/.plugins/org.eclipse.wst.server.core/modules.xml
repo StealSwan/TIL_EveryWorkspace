@@ -6,6 +6,7 @@
   <module moduleId="org.eclipse.jst.jee.server:SpringMvcStartBoard" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SpringEx1" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SpringMvc1" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SpringMvcReAnswerBoard" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:gg" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SpringMvc2" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SpringMvcRead3" serverId="Tomcat v9.0 Server at localhost"/>

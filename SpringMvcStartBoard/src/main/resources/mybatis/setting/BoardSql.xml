@@ -17,6 +17,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<select id="selectAllOfBoard" resultType="bdto">
-		select * from board order by num asc;
+		select * from board order by num asc
 	</select>
+	
+	<select id="selectOneOfBoard" parameterType="String" resultType="bdto">
+		select * from board where num=#{num}
+	</select>
+	
+	<update id="updateOfBoard" parameterType="bdto">
+		update board set writer=#{writer}, subject=#{subject}, content=#{content} where num=#{num}
+	</update>
+	
+	<delete id="deleteOfBoard" parameterType="String">
+		delete from board where num=#{num}
+	</delete>
 </mapper>

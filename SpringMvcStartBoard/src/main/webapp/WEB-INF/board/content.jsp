@@ -15,5 +15,22 @@
 </head>
 <body>
 
+	작성일: ${dto.writer}<br>
+	작성일: <fmt:formatDate value="${dto.writeday}" pattern="yyyy-MM-dd HH:mm"/> <br>
+	내용: 
+	<pre>${dto.content}</pre>
+	
+	<button type="button" class="btn btn-success btn-sm"
+	onclick="location.href='writeform'">글쓰기</button>
+
+	<button type="button" class="btn btn-success btn-sm"
+	onclick="location.href='list'">목록</button>
+
+	<button type="button" class="btn btn-success btn-sm"
+	onclick="location.href='updateform?num=${dto.num}'">수정</button>
+
+	<button type="button" class="btn btn-success btn-sm"
+	onclick="location.href='delete?num=${dto.num}'">삭제</button>
+
 </body>
 </html>

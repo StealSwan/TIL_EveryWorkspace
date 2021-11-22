@@ -1,6 +1,6 @@
 package data.board;
 
-import com.google.protobuf.Timestamp;
+import java.sql.Timestamp;
 
 public class BoardDto {
 	
