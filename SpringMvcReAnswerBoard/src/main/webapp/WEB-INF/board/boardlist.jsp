@@ -50,7 +50,7 @@
 							<!-- 제목출력 -->	
 							<td>
 								<!-- relevel만큼 공백을 줘야함 -->
-								<c:forEach var="sp" begin="1" end="${dto.revel}">
+								<c:forEach var="sp" begin="1" end="${dto.relevel}">
 									&nbsp;&nbsp;
 								</c:forEach>
 								
@@ -61,7 +61,7 @@
 								</c:if>
 								
 								<!-- 제목...통해서 내용보기 -->
-								<a href="content?num=${dto.num}&currentPage=${currentPage}&key=list">${dto.subject}</a>
+								<a href="content?num=${dto.num}&currentPage=${currentPage}">${dto.subject}</a>
 								
 								<!-- 사진이 있을 경우, 아이콘 표시 -->
 								<c:if test="${dto.photo!='no'}">

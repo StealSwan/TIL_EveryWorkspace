@@ -76,4 +76,43 @@ public class BoardDao extends SqlSessionDaoSupport{
 		
 		return getSqlSession().selectList("SelectPagingOfBoard", map);
 	}
+	
+	
+	//조회수 증가
+	public void updateReadCount(int num) {
+		
+		getSqlSession().update("UpdateReadCountOfBoard", num);
+	}
+	
+	
+	public BoardDto getData(int num) {
+		
+		return getSqlSession().selectOne("GetDataOfBoard", num);
+	}
+	
+	
+	//id, 비번 체크
+	public int getCheckPass(String num, String pass) {
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		map.put("num", num);
+		map.put("pass", pass);
+		
+		return getSqlSession().selectOne("CheckPassEqualOfBoard", map);
+	}
+	
+	
+	//실제 업데이트
+	public void updateBoard(BoardDto dto) {
+		
+		getSqlSession().update("UpdateOfBoard", dto);
+	}
+	
+	
+	//실제 삭제
+	public void deleteBoard(int num) {
+		
+		getSqlSession().delete("DeleteOfBoard", num);
+	}
 }

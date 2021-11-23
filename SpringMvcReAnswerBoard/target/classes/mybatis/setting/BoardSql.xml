@@ -33,4 +33,38 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="SelectPagingOfBoard" parameterType="HashMap" resultType="bdto">
 		select * from reboard order by regroup desc, restep asc limit #{start}, #{perpage}
 	</select>
+	
+	
+	<!-- readcount 증가 -->
+	<update id="UpdateReadCountOfBoard" parameterType="int">
+		update reboard set readcount=readcount+1 where num=#{num}
+	</update>
+	
+	
+	<!-- num에 해당하는 데이터 -->
+	<select id="GetDataOfBoard" parameterType="int" resultType="bdto">
+		select * from reboard where num=#{num}
+	</select>
+	
+	
+	<!-- 수정 삭제에 필요한 비번체크 -->
+	<select id="CheckPassEqualOfBoard" parameterType="HashMap" resultType="int">
+		select count(*) from reboard where num=#{num} and pass=#{pass}
+	</select>
+
+
+	<!-- 수정 -->
+	<update id="UpdateOfBoard" parameterType="bdto">
+		update reboard set writer=#{writer}, subject=#{subject}, content=#{content}
+			<if test="photo!=null">
+				,photo=#{photo}
+			</if>
+		where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="DeleteOfBoard" parameterType="int">
+		delete from reboard where num=#{num}
+	</delete>
 </mapper>

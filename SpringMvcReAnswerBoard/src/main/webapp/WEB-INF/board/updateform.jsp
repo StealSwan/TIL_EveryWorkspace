@@ -16,37 +16,30 @@
 <body>
 
 	<div style="margin-left: 50px;">
-		<form action="insert" method="post" enctype="multipart/form-data">
+		<form action="update" method="post" enctype="multipart/form-data">
 			
 			<!-- 답글일때 대비해 hidden 5개 -->
-			<input type="hidden" name="num" value="${num}">
+			<input type="hidden" name="num" value="${dto.num}">
 			<input type="hidden" name="currentPage" value="${currentPage}">
-			<input type="hidden" name="regroup" value="${regroup}">
-			<input type="hidden" name="restep" value="${restep}">
-			<input type="hidden" name="relevel" value="${relevel}">
 			
 			<table class="table table-bordered" style="width: 500px;">
 				<caption><b>
-					<c:if test="${num==0}">새글쓰기</c:if>
-					<c:if test="${num!=0}">답글쓰기</c:if>
+					수정폼
 				</b></caption>
 				
 				<tr>
 					<th width="100">작성자</th>
 					<td>
-						<input type="text" name="writer" class="form-control" required="required">
-					</td>
-					
-					<th width="100">비밀번호</th>
-					<td>
-						<input type="password" name="pass" class="form-control" required="required">
-					</td>
+						<input type="text" name="writer" class="form-control" required="required"
+						value="${dto.writer}">
+					</td>					
 				</tr>
 				
 				<tr>
 					<th width="100">제목</th>
 					<td colspan="3">
-						<input type="text" name="subject" class="form-control" required="required">
+						<input type="text" name="subject" class="form-control" required="required"
+						value="${dto.subject}">
 					</td>
 				</tr>
 				
@@ -59,13 +52,15 @@
 				
 				<tr>
 					<td colspan="4">
-						<textarea style="width: 500px; height: 150px;" name="content" class="form-control" required="required"></textarea>
+						<textarea style="width: 500px; height: 150px;" name="content" class="form-control" required="required">
+							${dto.content}
+						</textarea>
 					</td>
 				</tr>
 				
 				<tr>
 					<td colspan="4" align="center">
-						<button type="submit" class="btn btn-info" style="width: 120px;">저장하기</button>
+						<button type="submit" class="btn btn-info" style="width: 120px;">수정하기</button>
 						<button type="button" class="btn btn-info" style="width: 120px;"
 						onclick="history.back()">이전으로</button>
 					</td>
