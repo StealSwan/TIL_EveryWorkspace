@@ -1,8 +1,0 @@
-package spring.di.ex4;
-
-public class PersonData {
-
-	private String sawonname;
-	private int pay;
-	private String 
-}

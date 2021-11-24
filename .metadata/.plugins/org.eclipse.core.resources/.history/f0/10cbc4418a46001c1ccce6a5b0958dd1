@@ -1,6 +1,0 @@
-package spring.di.quiz;
-
-public class Score {
-
-	private int kor, eng, mat;
-}

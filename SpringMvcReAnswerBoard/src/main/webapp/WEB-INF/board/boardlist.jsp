@@ -63,6 +63,13 @@
 								<!-- 제목...통해서 내용보기 -->
 								<a href="content?num=${dto.num}&currentPage=${currentPage}">${dto.subject}</a>
 								
+								
+								<!-- 댓글개수 -->
+								<c:if test="${dto.acount>0}">
+									<a style="color: red;" href="content?num=${dto.num}&currentPage=${currentPage}#answer">[${dto.acount}]</a>
+								</c:if>
+								
+								
 								<!-- 사진이 있을 경우, 아이콘 표시 -->
 								<c:if test="${dto.photo!='no'}">
 									<span style="font-size: 0.8em; color: #ccc;"

@@ -1,8 +1,0 @@
-package spring.di.quiz;
-
-public class Mydata {
-	
-	Score score;
-	Info info;
-
-}

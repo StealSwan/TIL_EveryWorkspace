@@ -1,9 +1,0 @@
-package spring.di.ex7;
-
-public class Sawon {
-
-	private String name;
-	private int pay;
-	private String ;
-	private ArrayList
-}

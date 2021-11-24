@@ -1,5 +1,6 @@
 package spring.mvc.reboard;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import board.data.AnswerDao;
 import board.data.BoardDao;
 import board.data.BoardDto;
 
@@ -16,6 +18,9 @@ public class BoardListController {
 
 	@Autowired
 	BoardDao dao;
+
+	@Autowired
+	AnswerDao adao;
 	
 	
 	//시작과 동시에 list 나오도록
@@ -67,14 +72,22 @@ public class BoardListController {
 
 		//각페이지에서 필요한 게시글 가져오기...dao에서 만들었음
 		List<BoardDto> list=dao.getList(start, perPage);
-
+		
+		
+		//list에 각글에 대한 댓글 개수 출력하기
+		for(BoardDto d:list) {
+			
+			d.setAcount(adao.getAnswerList(d.getNum()).size());
+		}
+		
+		
 
 		//각글앞에 붙힐 시작번호 구하기
 		//총글이 20개일겨웅 1페이지 20,2페이지 15부터
 		//출력해서 1씩 감소해가면서 출력할것
 		int no = totalCount-(currentPage-1)*perPage;
-
 		
+		//출력에 필요한 변수들을 request에 저장
 		mview.addObject("totalCount", totalCount);
 		mview.addObject("list", list);
 		mview.addObject("startPage", startPage);

@@ -11,7 +11,16 @@ public class BoardDto {
 	private String content;
 	private String photo;
 
+	private int acount;
 	
+	
+	
+	public int getAcount() {
+		return acount;
+	}
+	public void setAcount(int acount) {
+		this.acount = acount;
+	}
 	private int regroup;
 	private int restep;
 	private int relevel;

@@ -41,4 +41,8 @@
 	<bean id="boardDao" class="board.data.BoardDao">
 		<property name="sqlSessionTemplate" ref="SqlSessionTemplate"/>	
 	</bean>
+	
+	<bean id="answerDao" class="board.data.AnswerDao">
+		<property name="sqlSessionTemplate" ref="SqlSessionTemplate"/>	
+	</bean>
 </beans>

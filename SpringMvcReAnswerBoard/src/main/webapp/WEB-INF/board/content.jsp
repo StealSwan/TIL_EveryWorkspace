@@ -11,6 +11,19 @@
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<style type="text/css">
+	
+	#answer{
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 20px; 
+	}
+	
+</style>
+
+
 <title>Insert title here</title>
 </head>
 <body>
@@ -47,6 +60,48 @@
 				</td>
 			</tr>
 			
+			
+			<!-- 댓글출력 -->
+			<tr>
+				<td>
+					<div id="answer">
+					
+						<b>댓글 ${acount}</b> <br><br>
+						<c:forEach var="a" items="${alist}">
+							${a.nickname}: ${a.content} &nbsp;&nbsp;
+							<span style="color: gray; font-size: 0.8em;">
+								<fmt:formatDate value="${a.writeday}" pattern="yyyy-MM-dd HH:mm"/>
+							</span> &nbsp;
+							
+							<span class="glyphicon glyphicon-pencil" style="cursor: pointer;"></span>&nbsp;
+							<span class="adel glyphicon glyphicon-trash" style="cursor: pointer;" idx="${a.idx}"></span><br>
+						</c:forEach>
+						
+					</div>
+					
+					<form action="ainsert" method="post" class="form-inline">
+						<!-- hidden -->
+						<input type="hidden" name="num" value="${dto.num}">
+						<input type="hidden" name="currentPage" value="${currentPage}">
+						<div>
+							<b>닉네임: </b>
+							<input type="text" name="nickname" class="form-control input-sm"
+							style="width: 100px;" required="required">
+							<b style="margin-left: 30px;">비밀번호: </b>
+							<input type="password" name="pass" class="form-control input-sm"
+							style="width: 100px;" required="required">			
+							<br><br>
+							<input type="text" name="content" class="form-control input-sm"
+							style="width: 500px;" required="required"
+							placeholder="댓글내용을 입력하세요">
+							
+							<button type="submit" class="btn btn-default btn-sm">확인</button>			
+						</div>
+					</form>
+				</td>
+			</tr>
+			
+			
 			<tr>
 				<td align="right">
 					<button class="btn btn-default btn-sm"
@@ -68,6 +123,44 @@
 			
 		</table>
 	</div>
+
+
+<script type="text/javascript">
+
+	//댓글 삭제
+	$("span.adel").click(function(){
+		
+		var idx=$(this).attr("idx");
+		//alert(idx);
+		
+		//비번입력
+		var pass=prompt("비밀번호를 입력해주세요");
+		//alert(pass);	//취소시 null
+		
+		if(pass==null)
+			return;	//취소시 함수종료
+			
+			
+		$.ajax({
+			type:"get",
+			dataType:"json",
+			url:"adelete",	//Controller의 매핑주소
+			data:{"idx":idx, "pass":pass},	//여기서 Controller로 보내고 check값을 받음, 성공할 경우 아래로 내려감
+			success: function(data){
+				
+				if(data.check==0){
+					
+					alert("비밀번호가 맞지않습니다");
+				}else{
+					
+					alert("댓글 삭제성공");
+					location.reload();
+				}
+			}
+		});
+	});
+
+</script>
 
 </body>
 </html>

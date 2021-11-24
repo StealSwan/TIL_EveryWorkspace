@@ -1,6 +1,0 @@
-package spring.di.ex3;
-
-public class grade {
-
-	Student student;
-}

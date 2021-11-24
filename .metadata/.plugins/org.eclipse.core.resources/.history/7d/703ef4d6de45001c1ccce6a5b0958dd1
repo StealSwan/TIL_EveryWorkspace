@@ -1,8 +1,0 @@
-package spring.di.ex1;
-
-public interface MessageInter {
-
-	abstract void sayHello(String name) {
-		
-	}
-}
