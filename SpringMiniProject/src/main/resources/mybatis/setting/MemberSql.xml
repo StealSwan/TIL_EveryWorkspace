@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<!-- id 중복체크 -->
+	<select id="IdCheckOfMember" parameterType="String" resultType="int">
+		select count(*) from member where id=#{id}
+	</select>
+	
+	
+	<!-- insert -->
+	<insert id="InsertOfMember" parameterType="mdto">
+		insert into member (name, id, pass, hp, gaipday) 
+		values(#{name}, #{id}, #{pass}, #{hp}, now())
+	</insert>
+	
+	
+	<!-- list 출력 -->
+	<select id="ListAllOfMember" resultType="mdto">
+		select * from member order by num asc
+	</select>
+</mapper>
