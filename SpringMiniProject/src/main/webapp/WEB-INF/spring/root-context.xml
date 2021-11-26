@@ -39,5 +39,9 @@
 	<!-- 안되니까 따로해줘야함 -->
 	<bean id="memberDao" class="member.data.MemberDao">
 		<property name="sqlSessionTemplate" ref="SqlSessionTemplate"/>	
-	</bean>		
+	</bean>
+	
+	<bean id="boardDao" class="board.data.BoardDao">
+		<property name="sqlSessionTemplate" ref="SqlSessionTemplate"/>	
+	</bean>				
 </beans>

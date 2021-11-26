@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+	<!-- 총 갯수 -->
+	<select id="TotalCountOfBoard" resultType="int">
+		select count(*) from myboard
+	</select>
+	
+	
+	<!-- 삽입 -->
+	<insert id="insertOfBoard" parameterType="bdto">
+		insert into myboard (writer, id, subject, photo, content, readcount, writeday)
+		values(#{writer},#{id},#{subject},#{photo},#{content},0,now())
+	</insert>
+	
+	
+	<!-- id로 이름찾기 - 출력용 -->
+	<select id="SearchNameOfMember" parameterType="String" resultType="String">
+		select name from member where id=#{id}
+	</select>
+
+
+	<!-- 페이징처리 전체리스트 출력 -->
+	<select id="SelectPagingOfBoard" parameterType="HashMap" resultType="bdto">
+		select * from myboard order by num desc limit #{start}, #{perpage}
+	</select>
+</mapper>

@@ -27,7 +27,7 @@
 			<th width="100">아이디</th>
 			<th width="200">핸드폰</th>
 			<th width="200">가입일</th>
-			<th width="150">수정삭제</th>
+			<th width="180">수정삭제</th>
 		</tr>
 		
 		<c:forEach var="dto" items="${list}" varStatus="i">
@@ -40,8 +40,8 @@
 					<fmt:formatDate value="${dto.gaipday}" pattern="yyyy-MM-dd"/>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info" style="width: 60px;" onclick="">수정</button>
-					<button type="button" class="btn btn-danger" style="width: 60px;" onclick="">삭제</button>
+					<button type="button" class="btn btn-info" style="width: 50px;" onclick="location.href='updateform?num=${dto.num}'">수정</button>
+					<button type="button" class="btn btn-danger" style="width: 50px;" onclick="location.href='delete?num=${dto.num}'">삭제</button>
 				</td>
 			</tr>
 		</c:forEach>

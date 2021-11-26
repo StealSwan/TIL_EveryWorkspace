@@ -22,4 +22,34 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="ListAllOfMember" resultType="mdto">
 		select * from member order by num asc
 	</select>
+	
+
+	<!-- 로그인..id,pass를 받아서 맞는지 체크 -->
+	<select id="loginCheckOfMember" parameterType="HashMap" resultType="int">
+		select count(*) from member where id=#{id} and pass=#{pass}
+	</select>
+	
+	
+	<!-- num에 대한 하나의 데이타 조회 -->
+	<select id="SelectOneOfMember" parameterType="String" resultType="mdto">
+		select * from member where num=#{num}
+	</select>
+	
+	
+	<!-- 해당 num에 대한 비밀번호 맞는지 체크 -->
+	<select id="PassCheckOfMember" parameterType="HashMap" resultType="int">
+		select count(*) from member where num=#{num} and pass=#{pass}
+	</select>
+	
+	
+	<!-- 업데이트 -->
+	<update id="UpdateOfMember" parameterType="mdto">
+		update member set name=#{name}, hp=#{hp} where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="DeleteOfMember" parameterType="String">
+		delete from member where num=#{num}
+	</delete>
 </mapper>

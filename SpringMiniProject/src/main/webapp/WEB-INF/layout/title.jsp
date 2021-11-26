@@ -23,11 +23,13 @@
 	
 	<span style="margin-left: 20px;">
 		<c:if test="${sessionScope.loginok==null}">
-			<button type="button" class="btn btn-info" onclick="location.href='login'">로그인</button>
+			<button type="button" class="btn btn-info" onclick="location.href='${root}/login'">로그인</button>
 		</c:if>
 		
 		<c:if test="${sessionScope.loginok!=null}">
 			<b>${sessionScope.myid}님</b>
+			<button type="button" class="btn btn-danger"
+			onclick="location.href='${root}/logout'">로그아웃</button>
 		</c:if>
 	</span>
 	
