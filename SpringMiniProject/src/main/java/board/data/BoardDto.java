@@ -2,6 +2,8 @@ package board.data;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class BoardDto {
 
 	private int num;
@@ -11,6 +13,8 @@ public class BoardDto {
 	private String photo;
 	private String content;
 	private int readcount;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Timestamp writeday;
 	
 	public int getNum() {

@@ -2,6 +2,7 @@
 <aop-reference-model>
 <aop-project name="SpringMvcStartBoard"/>
 <aop-project name="SpringMvcReAnswerBoard"/>
+<aop-project name="SpringMiniProject"/>
 <aop-project name="SpringMvcTest"/>
 <aop-project name="SpringMvc1"/>
 <aop-project name="SpringMvc2"/>

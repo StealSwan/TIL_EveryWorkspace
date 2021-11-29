@@ -55,8 +55,8 @@ public class BoardWriteController {
 	public String insert(
 			@ModelAttribute BoardDto dto,
 			@RequestParam ArrayList<MultipartFile> upload,
-			HttpSession session
-			//@RequestParam String currentPage
+			HttpSession session,
+			@RequestParam String currentPage
 			) {
 		
 		
@@ -105,9 +105,11 @@ public class BoardWriteController {
 		//dao의 insert 호출
 		dao.insertBoard(dto);
 		
-		//목록으로 가지말고 내용보기로 이동 - 아직 안함
-		//int num = dao.getMaxNum();
 		
-		return "/board/boardlist";
+		//목록으로 가지말고 내용보기로 이동 - 아직 안함
+		int num = dao.getMaxNum();
+		
+		//return "/board/boardlist";
+		return "redirect:content?num="+num+"&currentPage="+currentPage;
 	}
 }

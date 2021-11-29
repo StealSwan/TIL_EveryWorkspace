@@ -16,4 +16,12 @@ public class HomeController {
 		//보편적인 와일드 카드 스타일
 		return "/layout/main";
 	}
+	
+	
+	//메일 보내기
+	@GetMapping("mail/send")
+	public String mailform() {
+		
+		return "/mail/form";
+	}
 }

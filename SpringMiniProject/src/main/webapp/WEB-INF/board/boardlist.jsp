@@ -18,6 +18,13 @@
 	
 	<h1>전체갯수: ${totalCount}</h1>
 	<div style="margin-left: 50px;">
+
+		<div class="alert alert-danger" style="font-size: 1.3em; width: 800px;">
+			Ajax로 Board 목록 출력하기
+			<a href="list2"><span class="glyphicon glyphicon-th-list" style="margin-left: 200px; cursor: pointer;" id="list1"></span></a>
+			<a href="list2"><span class="glyphicon glyphicon-th-large" style="margin-left: 10px; cursor: pointer;" id="list2"></span></a>
+		</div>
+	
 		<table class="table table-bordered" style="width: 800px;">
 			<caption><b>이미지게시판</b>
 				<span style="float: right;">

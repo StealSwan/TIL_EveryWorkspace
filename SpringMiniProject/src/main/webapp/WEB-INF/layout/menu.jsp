@@ -19,9 +19,10 @@
 <body>
 
 	<a href="${root}/home">Home</a> &nbsp;&nbsp;
-	<a href="${root}/login/loginmain">Login</a> &nbsp;&nbsp;
+	<a href="${root}/login">Login</a> &nbsp;&nbsp;
 	<a href="${root}/member/form">회원가입</a> &nbsp;&nbsp;	<!-- 입력시 해당 매핑주소를 가진 컨트롤러로 이동 -->
 	<a href="${root}/board/list">회원게시판</a> &nbsp;&nbsp;
+	<a href="${root}/mail/send">Email</a> &nbsp;&nbsp;
 	
 </body>
 </html>

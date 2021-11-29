@@ -27,4 +27,51 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="SelectPagingOfBoard" parameterType="HashMap" resultType="bdto">
 		select * from myboard order by num desc limit #{start}, #{perpage}
 	</select>
+	
+	
+	<!-- 조회수 1증가 -->
+	<update id="UpdateReadCountOfBoard" parameterType="int">
+		update myboard set readcount=readcount+1 where num=#{num}
+	</update>
+	
+	
+	<!-- get Data -->
+	<select id="SelectOneOfBoard" parameterType="int" resultType="bdto">
+		select * from myboard where num=#{num}
+	</select>
+	
+	
+	<!-- 콘텐츠로 가기 - max num -->
+	<select id="MaxNumOfBoard" resultType="int">
+		select ifnull(max(num),0) from myboard
+	</select>
+	
+	
+	<!-- update -->
+	<update id="UpdateOfBoard">
+		update myboard set subject=#{subject}, content=#{content}
+			<!-- photo 조건 -->
+			<if test="photo!=null">
+				,photo=#{photo}
+			</if>
+			where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="DeleteOfBoard" parameterType="int">
+		delete from myboard where num=#{num}
+	</delete>
+	
+	
+	<!-- 전부출력 -->
+	<select id="SelectAllOfBoard" resultType="bdto">
+		select * from myboard order by num desc
+	</select>
+	
+	
+	<!-- 이미지출력 -->
+	<select id="SelectPhotoOfBoard" resultType="bdto">
+		select * from myboard where photo!='no' order by num desc
+	</select>
 </mapper>

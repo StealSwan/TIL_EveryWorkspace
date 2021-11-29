@@ -86,4 +86,12 @@ public class BoardListController {
 		
 		return mview;
 	}
+	
+	
+	//리스트 2로 이동
+	@GetMapping("/board/list2")
+	public String list2() {
+		
+		return "/board/ajaxlist";
+	}
 }

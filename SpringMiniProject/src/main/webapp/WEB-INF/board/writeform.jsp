@@ -26,6 +26,7 @@
 		<!-- hidden -->
 		<input type="hidden" name="writer" value="${name}">
 		<input type="hidden" name="id" value="${sessionScope.myid}">
+		<input type="hidden" name="currentPage" value="${currentPage}">
 	
 	
 		<table class="table table-bordered" style="width: 500px;">
