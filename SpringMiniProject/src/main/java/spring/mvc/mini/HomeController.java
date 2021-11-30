@@ -19,7 +19,7 @@ public class HomeController {
 	
 	
 	//메일 보내기
-	@GetMapping("mail/send")
+	@GetMapping("/mail/send")
 	public String mailform() {
 		
 		return "/mail/form";
