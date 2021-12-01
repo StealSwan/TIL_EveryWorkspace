@@ -15,34 +15,34 @@
 </head>
 <body>
 
-	<form action="insert" method="post">
+	<form action="shopinsert" method="post">
 		<table class="table table-bordered" style="width: 500px;">
-			<caption><b>차 정보 입력</b></caption>
+			<caption><b>상품명 입력</b></caption>
 				<tr>
-					<th bgcolor="#ddd">자동차명</th>
+					<th bgcolor="#ddd">상품명</th>
 						<td>
-							<input type="text" name="carname" class="form-control" style="width: 200px;" required="required">
+							<input type="text" name="sangpum" class="form-control" style="width: 200px;" required="required">
 						</td>
 				</tr>
 
 				<tr>
-					<th bgcolor="#ddd">단가</th>
+					<th bgcolor="#ddd">가격</th>
 						<td>
-							<input type="text" name="carprice" class="form-control" style="width: 200px;" required="required">
+							<input type="text" name="price" class="form-control" style="width: 200px;" required="required">
 						</td>
 				</tr>
 
 				<tr>
-					<th bgcolor="#ddd">자동차 색상</th>
+					<th bgcolor="#ddd">이미지</th>
 						<td>
-							<input type="color" name="carcolor" class="form-control" style="width: 200px;" value="#ffccff">
+							<input type="text" name="photoname" class="form-control" style="width: 200px;" required="required">
 						</td>
 				</tr>
 				
 				<tr>
-					<th bgcolor="#ddd">구입일</th>
+					<th bgcolor="#ddd">입고일</th>
 						<td>
-							<input type="date" name="carguip" class="form-control" style="width: 200px;" value="2021-11-30">
+							<input type="date" name="ipgoday" class="form-control" style="width: 200px;" value="2021-11-30">
 						</td>
 				</tr>
 				
@@ -50,7 +50,7 @@
 					<td colspan="2" align="center">
 						<button type="submit" class="btn btn-info" style="width: 100px;">저장</button>
 						<button type="button" class="btn btn-info" style="width: 100px;"
-						onclick="location.href='list'">목록</button>
+						onclick="location.href='shoplist'">목록</button>
 					</td>
 				</tr>
 				

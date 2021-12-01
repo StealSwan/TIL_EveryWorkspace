@@ -15,34 +15,41 @@
 </head>
 <body>
 
-	<form action="insert" method="post">
+	<form action="update" method="post">
+	
+	<!-- hidden -->
+	<input type="hidden" name="num" value="${dto.num}">
+	
 		<table class="table table-bordered" style="width: 500px;">
 			<caption><b>차 정보 입력</b></caption>
 				<tr>
 					<th bgcolor="#ddd">자동차명</th>
 						<td>
-							<input type="text" name="carname" class="form-control" style="width: 200px;" required="required">
+							<input type="text" name="carname" class="form-control" style="width: 200px;"
+							value="${dto.carname}">
 						</td>
 				</tr>
 
 				<tr>
 					<th bgcolor="#ddd">단가</th>
 						<td>
-							<input type="text" name="carprice" class="form-control" style="width: 200px;" required="required">
+							<input type="text" name="carprice" class="form-control" style="width: 200px;"
+							value="${dto.carprice}">
 						</td>
 				</tr>
 
 				<tr>
 					<th bgcolor="#ddd">자동차 색상</th>
 						<td>
-							<input type="color" name="carcolor" class="form-control" style="width: 200px;" value="#ffccff">
+							<input type="color" name="carcolor" class="form-control" style="width: 200px;"
+							value="${dto.carcolor}">
 						</td>
 				</tr>
 				
 				<tr>
 					<th bgcolor="#ddd">구입일</th>
 						<td>
-							<input type="date" name="carguip" class="form-control" style="width: 200px;" value="2021-11-30">
+							<input type="date" name="carguip" class="form-control" style="width: 200px;" value="${dto.carguip}">
 						</td>
 				</tr>
 				

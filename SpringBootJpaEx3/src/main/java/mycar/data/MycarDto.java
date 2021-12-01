@@ -35,5 +35,6 @@ public class MycarDto {
 	private String carguip;
 
 	@CreationTimestamp //엔티티가 생성되는 그 시점의 타임을 자동등록해준다
+	@Column(updatable = false)
 	private Timestamp guipday;
 }

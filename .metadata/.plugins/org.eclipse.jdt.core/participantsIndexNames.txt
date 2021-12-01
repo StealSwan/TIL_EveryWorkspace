@@ -81,6 +81,8 @@ C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \SpringMvc2\src\main\java
 C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\865901317.index
 \SpringMvcMunje\src\main\java
+C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\971823610.index
+\SpringBootJpaEx3\src\main\java
 C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3301665006.index
 \SpringBootEx2\src\main\java
 C:\Users\user\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4164636985.index
