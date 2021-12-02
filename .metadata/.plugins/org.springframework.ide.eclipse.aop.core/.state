@@ -4,10 +4,12 @@
 <aop-project name="SpringBootEx1"/>
 <aop-project name="SpringMvcReAnswerBoard"/>
 <aop-project name="SpringMiniProject"/>
-<aop-project name="SpringEx1"/>
 <aop-project name="SpringMvc1"/>
-<aop-project name="SpringMvcRead3"/>
+<aop-project name="SpringEx1"/>
 <aop-project name="SpringMvcRead7"/>
+<aop-project name="SpringMvcRead3"/>
+<aop-project name="SpringBootEx2"/>
+<aop-project name="SpringBootJpaEx3"/>
 <aop-project name="SpringMvcTest"/>
 <aop-project name="SpringMvc2"/>
 <aop-project name="SpringEx2"/>

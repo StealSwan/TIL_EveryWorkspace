@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 인터페이스 DAO 역할 -->
+<mapper namespace="boot.book.model.BookMapper">
+
+	<!-- 평소처럼 SQL 이후 DAO로 가지 않는 대신 id 값으로 통일을 해서 바로 Controller로!!! -->
+	
+	<!-- 총갯수 출력 -->
+	<select id="getTotalCount" resultType="int">
+		select count(*) from seojum
+	</select>
+
+
+	<!-- 전체리스트 출력 -->
+	<select id="getAllDatas" resultType="bdto">
+		select * from seojum order by num desc
+	</select>
+
+	
+	<!-- insert -->
+	<insert id="insertBook" parameterType="bdto">
+		insert into seojum (bookname,bookprice,bookphoto,ipgoday) values (#{bookname},#{bookprice},#{bookphoto},now())
+	</insert>
+	
+	
+	<!-- num에 해당하는 값 하나 출력 -->
+	<select id="getData" parameterType="String" resultType="bdto">
+		select * from seojum where num=#{num}
+	</select>
+	
+	
+	<!-- 실제 수정 -->
+	<update id="updateBook" parameterType="bdto">
+		update seojum set bookname=#{bookname}, bookprice=#{bookprice}
+		
+		<if test="bookphoto!='no'">
+			,bookphoto=#{bookphoto}
+		</if>
+		
+		where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="deleteBook" parameterType="String">
+		delete from seojum where num=#{num}
+	</delete>
+</mapper>
