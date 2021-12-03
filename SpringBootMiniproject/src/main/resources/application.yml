@@ -1,0 +1,27 @@
+#tomcat pot
+server:
+  port: 9003
+ 
+#jsp
+spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/shop/
+#      suffix: .jsp
+      
+  devtools:
+    livereload:
+      enabled: true
+      
+#mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sist?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+
+#mybatis - mapper와 dto의 위치
+mybatis:
+  type-aliases-package: data.mapper,data.dto
+  mapper-locations:
+  - /mapper/**/*.xml

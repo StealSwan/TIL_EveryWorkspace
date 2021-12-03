@@ -8,6 +8,8 @@
 <aop-project name="SpringEx1"/>
 <aop-project name="SpringMvcRead7"/>
 <aop-project name="SpringMvcRead3"/>
+<aop-project name="SpringBootMybatisEx4"/>
+<aop-project name="SpringBootMiniproject"/>
 <aop-project name="SpringBootEx2"/>
 <aop-project name="SpringBootJpaEx3"/>
 <aop-project name="SpringMvcTest"/>
