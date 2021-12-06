@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="data.mapper.MemberMapper">
+	
+	<!-- 인서트 -->
+	<insert id="insertMember" parameterType="mdto">
+		insert into mymember (name,id,pass,hp,addr,email,gaipday) 
+		values(#{name},#{id},#{pass},#{hp},#{addr},#{email},now())
+	</insert>
+
+
+	<!-- 전체출력 -->
+	<select id="getAllMembers" resultType="mdto">
+		select * from mymember order by id asc
+	</select>
+	
+	
+	<!-- id check -->
+	<select id="getIdCheck" parameterType="String" resultType="int">
+		select count(*) from mymember where id=#{id}
+	</select>
+	
+	
+	<!-- 비밀번호 체크 -->
+	<select id="getCheckPass" parameterType="HashMap" resultType="int">
+		select count(*) from mymember where num=#{num} and pass=#{pass}
+	</select>
+	
+	
+	<!-- 하나의 값 가져오기 -->
+	<select id="getMember" parameterType="String" resultType="mdto">
+		select * from mymember where num=#{num}
+	</select>
+	
+	
+	<!-- 업데이트 -->
+	<update id="updateMember" parameterType="mdto">
+		update mymember set name=#{name}, hp=#{hp}, addr=#{addr}, email=#{email} where num=#{num}
+	</update>
+</mapper>

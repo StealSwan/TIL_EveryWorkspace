@@ -22,4 +22,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getAllSangpums" resultType="sdto">
 		select * from shop order by num desc;
 	</select>
+	
+	
+	<!-- 하나의 num에 해당하는 값 -->
+	<select id="getData" parameterType="String" resultType="sdto">
+		select * from shop where num=#{num}
+	</select>
+	
+	
+	<!-- 실제 업데이트 -->
+	<update id="updateShop" parameterType="sdto">
+		update shop set sangpum=#{sangpum},price=#{price}
+		
+		<if test="photoname!=null">
+			,photoname=#{photoname}
+		</if>
+		
+		where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="deleteShop" parameterType="String">
+		delete from shop where num=#{num}
+	</delete>
 </mapper>

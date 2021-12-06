@@ -17,4 +17,13 @@ public interface MysqlShopMapper {
 	
 	//전체출력
 	public List<ShopDto> getAllSangpums();
+	
+	//하나의 num에 해당하는 것 출력
+	public ShopDto getData(String num);
+	
+	//업데이트
+	public void updateShop(ShopDto dto);
+	
+	//삭제
+	public void deleteShop(String num);
 }
