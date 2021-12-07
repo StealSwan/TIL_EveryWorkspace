@@ -24,4 +24,16 @@ public interface MemberMapper {
 	
 	//실제 업데이트
 	public void updateMember(MemberDto dto);
+	
+	//delete
+	public void deleteMember(String num);
+	
+	
+	//////////////////////////////
+	
+	//ID에 따라 이름 얻어오기
+	public String getName(String id);
+	
+	//로그인
+	public int login(HashMap<String, String> map);
 }

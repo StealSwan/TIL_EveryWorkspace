@@ -148,4 +148,35 @@ public class MemberControlloer {
 		
 		return "redirect:list";
 	}
+	
+
+	//실제 삭제
+	//Ajax에서 온 num과 pass를 받음 - Ajax와 통신
+	@GetMapping("/member/memberdelete")
+	public @ResponseBody HashMap<String, Integer> delete(@RequestParam String num,
+			@RequestParam String pass){
+		
+		//비번이 맞는지 체크 - 체크용 map
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		map.put("num", num);
+		map.put("pass", pass);
+		
+		int check = mapper.getCheckPass(map);
+		
+		//비번이 맞는 경우
+		if(check==1) {
+			
+			//db로부터 삭제 메서드 불러옴
+			mapper.deleteMember(num);
+		}
+		
+		
+		HashMap<String, Integer> rmap = new HashMap<String, Integer>();
+		
+		rmap.put("check", check);
+		
+		return rmap;
+	}
+	
 }

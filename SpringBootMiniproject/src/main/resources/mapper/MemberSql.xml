@@ -40,4 +40,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="updateMember" parameterType="mdto">
 		update mymember set name=#{name}, hp=#{hp}, addr=#{addr}, email=#{email} where num=#{num}
 	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="deleteMember" parameterType="String">
+		delete from mymember where num=#{num}
+	</delete>
+	
+	
+	<!-- ID에 따른 이름 출력 -->
+	<select id="getName" parameterType="String" resultType="String">
+		select name from mymember where id=#{id}
+	</select>
+	
+	
+	<!-- 로그인 -->
+	<select id="login" parameterType="HashMap" resultType="int">
+		select count(*) from mymember where id=#{id} and pass=#{pass}
+	</select>
 </mapper>

@@ -14,6 +14,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원게시판
+
+	<!-- 로그인 상태에서만 보이게 -->
+	<c:if test="${sessionScope.loginok!=null}">
+		<button type="button" class="btn btn-default" style="width: 100px; margin-left: 600px;" 
+		onclick="location.href='form'">글쓰기</button>
+	</c:if>
+
+	<br><br>
+	
+	<table class="table" style="width: 750px;">
+		<tr bgcolor="#ddd">
+			<th width="50">번호</th>
+			<th width="350">제목</th>
+			<th width="100">작성자</th>
+			<th width="70">조회</th>
+			<th width="50">등록일</th>
+		</tr>
+		
+		<c:if test="${totalCount==0}">
+			<tr height="50">
+				<td colspan="5" align="center">
+					<h4><b>등록된 글이 없습니다</b></h4>
+				</td>
+			</tr>
+		</c:if>
+	</table>
+
 </body>
 </html>

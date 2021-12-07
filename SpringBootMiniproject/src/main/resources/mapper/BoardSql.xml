@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="data.mapper.BoardMapper">
+	
+	<!-- 총갯수 -->
+   <select id="getTotalCount" resultType="int">
+      select count(*) from springboard
+   </select>
+
+
+	<!-- 조회수 증가 -->
+	<update id="updateReadCount" parameterType="String">
+		update springboard set readcount=readcount+1 where num=#{num}
+	</update>
+	
+	
+	<!-- num에 해당하는 Data 가져오기 -->
+	<select id="getData" parameterType="String" resultType="bdto">
+		select * from springboard where num=#{num}
+	</select>
+	
+	
+	<!-- content로 이동하기 위해 Max Num 가져오기 -->
+	<select id="getMaxNum" resultType="int">
+		select ifnull(max(num),0) from springboard
+	</select>
+	
+	
+	<!-- 전체 출력 -->
+	<select id="getList" parameterType="HashMap" resultType="bdto">
+		select * from springboard order by num desc limit #{start}, #{perpage}
+	</select>
+	
+	
+	<!-- insert -->
+	<insert id="insertBoard" parameterType="bdto">
+		insert into springboard (myid,subject,content,uploadfile,writeday) 
+		values (#{myid},#{subject},#{content},#{uploadfile},now())
+	</insert>
+</mapper>

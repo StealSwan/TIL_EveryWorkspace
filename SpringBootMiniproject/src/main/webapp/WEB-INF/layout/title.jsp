@@ -24,6 +24,21 @@
 	</a>
 	
 	<b>SpringBoot + Mybatis + Tiles</b>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	<span style="margin-right: 50px;">
+		<c:if test="${sessionScope.loginok==null}">
+			<button type="button" class="btn btn-success"
+			onclick="location.href='${root}/login/main'">로그인</button>
+		</c:if>
+		
+		<c:if test="${sessionScope.loginok!=null}">
+			<b>${sessionScope.myid}님이 로그인 중입니다.</b>
+			<button type="button" class="btn btn-danger" style="width: 100px;"
+			onclick="location.href='${root}/login/logoutprocess'">로그아웃</button>			
+		</c:if>
+	</span>
 
 </body>
 </html>
