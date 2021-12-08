@@ -24,4 +24,10 @@ public interface BoardMapper {
 	
 	//인서트
 	public void insertBoard(BoardDto dto);
+	
+	//업데이트
+	public void updateBoard(BoardDto dto);
+	
+	//삭제
+	public void deleteBoard(String num);
 }

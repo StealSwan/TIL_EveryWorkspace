@@ -40,4 +40,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into springboard (myid,subject,content,uploadfile,writeday) 
 		values (#{myid},#{subject},#{content},#{uploadfile},now())
 	</insert>
+	
+	
+	<!-- update -->
+	<update id="updateBoard" parameterType="bdto">
+		update springboard set subject=#{subject}, content=#{content}
+		
+		<!-- 업로드 파일이 없을 경우 -->
+		<if test="uploadfile!=null">
+			,uploadfile=#{uploadfile}
+		</if>
+		
+		where num=#{num}
+	</update>
+	
+	
+	<!-- 삭제 -->
+	<delete id="deleteBoard" parameterType="String">
+		delete from springboard where num=#{num}
+	</delete>
 </mapper>

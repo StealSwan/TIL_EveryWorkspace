@@ -59,4 +59,18 @@ public class BoardService {
 	
 		mapper.insertBoard(dto);
 	}
+	
+	
+	//업데이트
+	public void updateBoard(BoardDto dto) {
+	
+		mapper.updateBoard(dto);
+	}
+	
+	
+	//삭제
+	public void deleteBoard(String num) {
+		
+		mapper.deleteBoard(num);
+	}
 }

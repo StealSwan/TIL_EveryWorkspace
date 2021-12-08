@@ -1,4 +1,8 @@
-GitRepositoriesView.GitDirectories=C\:\\SIST0730\\javawork\\SistJavaProject\\src\\.git;C\:\\Users\\user\\eclipse-workspace\\.git;
-GitRepositoriesView.GitDirectories.relative=C\:\\SIST0730\\javawork\\SistJavaProject\\src\\.git;.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\user\\git\\SistFinalProject\\.git;C\:\\Users\\user\\git\\repository1\\.git;C\:\\SIST0730\\javawork\\SistJavaProject\\src\\.git;C\:\\Users\\user\\eclipse-workspace\\.git;
+GitRepositoriesView.GitDirectories.relative=C\:\\Users\\user\\git\\SistFinalProject\\.git;C\:\\Users\\user\\git\\repository1\\.git;C\:\\SIST0730\\javawork\\SistJavaProject\\src\\.git;.git;
+RepositoryGroups.uuids=
+RepositorySearchDialogDeepSearch=true
+RepositorySearchDialogSearchPath=C\:\\Users\\user\\git\\SistFinalProject
+RepositorySearchDialogSkipHidden=true
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

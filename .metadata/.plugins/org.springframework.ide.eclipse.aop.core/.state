@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="SpringMvcStartBoard"/>
+<aop-project name="SistFinalProject"/>
 <aop-project name="SpringBootEx1"/>
 <aop-project name="SpringMiniProject"/>
 <aop-project name="SpringMvcReAnswerBoard"/>
