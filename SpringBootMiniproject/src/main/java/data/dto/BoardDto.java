@@ -20,5 +20,7 @@ public class BoardDto {
 	private int readcount;
 	private Timestamp writeday;
 	private String name;
+	
+	private int acount;
 
 }

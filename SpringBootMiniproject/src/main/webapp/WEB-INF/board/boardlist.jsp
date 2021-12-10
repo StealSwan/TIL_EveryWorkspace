@@ -51,6 +51,13 @@
 							${a.subject}
 						</a>
 						
+						
+						<!-- 댓글갯수 -->
+						<c:if test="${a.acount>0}">
+							<a style="color: red;" href="content?num=${a.num}&currentPage=${currentPage}">[${a.acount}]</a>
+						</c:if>
+						
+						
 						<c:if test="${a.uploadfile!='no'}">
 							<span class="glyphicon glyphicon-picture" style="color: gray"></span>
 						</c:if>

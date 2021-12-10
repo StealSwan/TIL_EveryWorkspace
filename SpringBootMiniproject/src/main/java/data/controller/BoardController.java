@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import data.dto.BoardDto;
 import data.mapper.BoardMapper;
 import data.mapper.MemberMapper;
+import data.service.BoardAnswerService;
 import data.service.BoardService;
 
 @Controller
@@ -28,6 +29,10 @@ public class BoardController {
 	
 	@Autowired
 	MemberMapper memMapper;
+	
+	@Autowired
+	BoardAnswerService aservice;
+	
 	
 	//리스트 출력 - currentPage 페이징 처리
 	@GetMapping("/board/list")
@@ -79,6 +84,9 @@ public class BoardController {
 					String name = memMapper.getName(d.getMyid());
 					
 					d.setName(name);
+					
+					//num에 해당하는 댓글들에 관련된 사이즈
+					d.setAcount(aservice.getAllAnswers(d.getNum()).size());
 				}
 				
 				
