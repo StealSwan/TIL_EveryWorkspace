@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="data.mapper.GuestMapper">
+	
+	<!-- 전체수 -->
+	<select id="getTotalCount" resultType="int">
+		select count(*) from myguest
+	</select>
+	
+	
+	<!-- 삽입 -->
+	<insert id="insertGuest" parameterType="gdto">
+		insert into myguest (nickname,photo,content,likes,writeday) 
+		values(#{nickname},#{photo},#{content},0,now())
+	</insert>
+	
+	
+	<!-- 전체 데이터 -->
+	<select id="getList" parameterType="HashMap" resultType="gdto">
+		select * from myguest order by num desc limit #{start}, #{perpage}
+	</select>
+	
+	
+	<!-- 하나의 데이터 -->
+	<select id="getData" parameterType="String" resultType="gdto">
+		select * from myguest where num=#{num}
+	</select>
+	
+	
+	<!-- 업데이트 -->
+	<update id="updateGuest" parameterType="gdto">
+		update myguest set nickname=#{nickname},content=#{content}
+		
+		<if test="photo!='no'">
+			,photo=#{photo}
+		</if>
+		where num=#{num}
+	</update>
+
+
+	<!-- 삭제 -->
+	<delete id="deleteGuest" parameterType="String">
+		delete from myguest where num=#{num}
+	</delete>
+</mapper>
